@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 
   it "name と email を持ったユーザーを登録できること" do
-    user = User.new(
+    user = described_class.new(
       name: "John",
       email: "john@example.com",
       )
