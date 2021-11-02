@@ -12,6 +12,11 @@ jobs:
       - checkout:
           path: ~/minoirominori
       - ruby/install-deps
+      - run:  wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+      - run:  bash .circleci/setup-heroku.sh
+      - add_ssh_keys:
+          fingerprints: 
+          - "SHA256:8whK7z7k7uhcgyvbVuKBmiRzJRMbxYTwK6pwTHG13Rs "
 
   test:
     docker:
