@@ -15,9 +15,9 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
   password: password
-  host: <%= ENV.fetch("APP_DATABASE_HOST") { 'db' } %>
+  host: db
 
-development:
+  development:
   <<: *default
   database: rails-front-demo-db
 
