@@ -17,7 +17,7 @@ default: &default
   password: password
   host: db
 
-  development:
+development:
   <<: *default
   database: rails-front-demo-db
 
