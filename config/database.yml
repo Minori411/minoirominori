@@ -51,7 +51,7 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['rails-front-demo-db'] %>
+  database: rails-front-demo-db
   username: <%= ENV['APP_DATABASE_USERNAME'] %>
   password: <%= ENV['APP_DATABASE_PASSWORD'] %>
   host: <%= ENV['APP_DATABASE_HOST'] %>
