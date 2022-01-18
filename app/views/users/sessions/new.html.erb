@@ -1,6 +1,6 @@
 <% provide(:title, "ログイン") %>
 <main id="app" data-action="/login">
-              <div class="loginpanel_wrap p-t6 p-b6">
+              <div class="loginpanel_wrap back_gray p-t6 p-b6">
                   <div class="loginpanel">
                       <form method="POST" action="" accept-charset="UTF-8" novalidate id="login">
                           <input name="_token" type="hidden" value="">
@@ -8,36 +8,35 @@
                               <h1>ログイン</h1>
                           </div>
                           <div class="m-b-20"></div>
-                          <%= form_for(:session, url: login_path) do |f| %>
+                          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                             <div class="input_head">
                             <p><%= f.label :メールアドレス %></p>
                             </div>
-                            <%= f.email_field :email, :placeholder => "info@minoiro.com" %>
+                            <%= f.email_field :email, autofocus: true, autocomplete: "email",:placeholder => "info@minoiro.com" %>
                             <div class="input_body">
                             <p><%= f.label :パスワード（英数字8文字以上） %></p>
                             </div>
                             <span class="help-block"></span>
-                            <%= f.password_field :password, :placeholder => "Password"%>
+                            <%= f.password_field :password, autocomplete: "current-password",:placeholder => "Password"%>
                             <i class="fa fa-eye icon_eye js-toggle-password"></i>
                             <%= f.submit "ログイン", class:"submit_buttons submit_button primaryButton" %>
-                          <% end %>
-                          <div class="m-t2">
-                          <label> 
-                              <input type="checkbox" name="remember">
-                              ログインしたままにする
-                          </label>
-                          </div>
-                            <div class="m-t3">
-                              <a href="#" class="btn btn_small">アカウントをお持ちでない方はこちら</a>
+                          
+                            <% if devise_mapping.rememberable? %>
+                              <div class="m-t2">
+                              <label>
+                                <%= f.check_box :remember_me %>
+                                </label>
+                                <%= f.label :remember_me %>
                               </div>
-                              <div class="m-t1">
-                              <a href="#">パスワードをお忘れの方はこちら</a>
-                              </div>
+                            <% end %>
+                          
+                            <%= render "users/shared/links" %>
+
                       </form>
                       </div>
                   </div>
               </main>   
                     
-                          
-                            
+                <% end %>
+
                   

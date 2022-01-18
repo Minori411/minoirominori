@@ -1,0 +1,79 @@
+<% provide(:title, "SIGN UP") %>
+<main id="app"data-action="users/sign_up">
+        <div id="vapp">
+            <div class="loginpanel_wrap p-t6 p-b6">
+                <div class="loginpanel">
+                    <form id="register" method="POST" action="" accept-charset="UTF-8">
+                        <input type="hidden" name="_token" value="">
+                        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                          <%= render "users/shared/error_messages", resource: resource %>
+                        <div class="login_title">
+                            <h1>新規会員登録</h1>
+                            <p class="login_lead">メールアドレスで登録</p>
+                        </div>
+                        <div class="form_item">
+                            <div class="input_head">
+                          <p><%= f.label :メールアドレス %></p>
+                            </div>
+                            <div class="input_body">
+                          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                            </div>
+                        </div>
+                        <div class="form_item">
+                            <div class="input_head">
+                                <p><%= f.label :ユーザー名 %> <em>(6 characters maximum)</em></p>
+                            </div>
+                            <div class="input_body">
+                              <%= f.text_field :name, :placeholeder => "ユーザー名", autofocus: true, maxlength: "8" %>
+                            </div>
+                        </div>
+                        <div class="form_item">
+                            <div class="input_head">
+                                <p><%= f.label :パスワード（英数字8文字以上）%></p>
+                            </div>
+                            <div class="input_body">
+                            <% if @minimum_password_length %>
+                            <em>(<%= @minimum_password_length %> characters minimum)</em>
+                            <% end %><br />
+                            <%= f.password_field :password, autocomplete: "new-password" %>                               
+                            <i class="fa icon_eye fa-eye">
+                            </i>
+                            </div>
+                        </div>
+                        <div class="form_item">
+                            <div class="input_head">
+                                <p><%= f.label :確認用パスワード %></p>
+                            </div>
+                            <div class="input_body">
+                            <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+                            <i class="fa icon_eye fa-eye">
+                                </i>
+                            </div>
+                        </div>
+                        <div class="checkbox_area flexbox">
+                            <p class="checkbox_content mt-4">
+                                <span class="checkbox_wrapper">
+                                    <label>
+                                        <input id="is_guideline" type="checkbox" name="is_kiyaku">
+                                        <span>
+                                            <a href="#" target="_blank">利用規約</a>
+                                            と
+                                            <a href="#" target="_blank">個人情報保護法</a>
+                                            に同意します。
+                                        </span>
+                                    </label>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="submit_buttons">
+                        <%= f.submit "無料で会員登録する",class:"submit_button primaryButton" %>
+                        </div>
+                        <div class="m-t3">
+                        <%= render "users/shared/links" %>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>  
+<% end %>

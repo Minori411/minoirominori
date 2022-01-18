@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+flex: 1 0 auto;
+}
+    
+.text-lighten-4{
+font-size: 12px;
+}
+
+.page-footer{
+background: #ff6e00!important;
+}
+
+.grey-text{
+font-size: 12px;
+padding-bottom: 10px;
+}
+
+.page-footer{
+a:hover{
+color:darken(#eeeeee,20%)!important;
+}
+}

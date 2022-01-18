@@ -8,13 +8,14 @@
     
     <script src="https://kit.fontawesome.com/224f2824f8.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
-    
+    <%= render 'layouts/header' %>
     <%= yield %>
-    
-    
+    <%= render 'layouts/footer' %>
   </body>
 </html>
