@@ -55,11 +55,7 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker:
-<<<<<<< HEAD
           version: 20.10.11
-=======
-          version: 20.10.7
->>>>>>> origin/modeling-users
       - heroku/install
       - run:
           name: heroku login
