@@ -1,0 +1,17 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+<div class="back_gray p-t6 p-b6">
+  <div class="loginpanel">
+    <form method="POST" action="">
+      <h2>再設定メール送信</h2>
+      <p class="guide">入力していただいたメールアドレス宛に再設定のご案内メールが届きます。
+      <div class="box has-error">
+      <%= f.email_field :email, :placeholder => "メールアドレス", autofocus: true, autocomplete: "email" %>
+      </div>
+      <div class="submit_buttons">
+        <%= f.submit "送信する",class:"primaryButton submit_button"%>
+      </div>
+    </form>
+  </div>
+</div>
+<% end %>
