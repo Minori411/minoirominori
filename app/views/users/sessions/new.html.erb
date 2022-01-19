@@ -21,15 +21,6 @@
                             <i class="fa fa-eye icon_eye js-toggle-password"></i>
                             <%= f.submit "ログイン", class:"submit_buttons submit_button primaryButton" %>
                           
-                            <% if devise_mapping.rememberable? %>
-                              <div class="m-t2">
-                              <label>
-                                <%= f.check_box :remember_me %>
-                                </label>
-                                <%= f.label :remember_me %>
-                              </div>
-                            <% end %>
-                          
                             <%= render "users/shared/links" %>
 
                       </form>
