@@ -1,8 +1,9 @@
-.loginpanel_wrap,
-.back_gray{
-    background: #f8f8f8!important;
-}
+@import "footer";
+@import "header";
+@import "sessions";
+@import "bootstrap";
+@import "contacts";
 
-.m-t2{
-    color:#333!important;
+input{
+    color: #fff!important;
 }
