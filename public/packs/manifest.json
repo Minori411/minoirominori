@@ -1,44 +1,44 @@
 {
-  "application.js": "/packs/application-85da1c9103e5e3eb11c9.js",
-  "application.js.map": "/packs/application-85da1c9103e5e3eb11c9.js.map",
+  "application.js": "/packs/js/application-1e8c672ae2c9961a229f.js",
+  "application.js.map": "/packs/js/application-1e8c672ae2c9961a229f.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/application-85da1c9103e5e3eb11c9.js"
+        "/packs/js/application-1e8c672ae2c9961a229f.js"
       ],
       "js.map": [
-        "/packs/application-85da1c9103e5e3eb11c9.js.map"
+        "/packs/js/application-1e8c672ae2c9961a229f.js.map"
       ]
     },
     "hello_react": {
       "js": [
-        "/packs/hello_react-85da1c9103e5e3eb11c9.js"
+        "/packs/js/hello_react-e5f4f62a241f06f14a53.js"
       ],
       "js.map": [
-        "/packs/hello_react-85da1c9103e5e3eb11c9.js.map"
+        "/packs/js/hello_react-e5f4f62a241f06f14a53.js.map"
       ]
     },
     "hello_typescript": {
       "js": [
-        "/packs/hello_typescript-85da1c9103e5e3eb11c9.js"
+        "/packs/js/hello_typescript-62a7ba3025e0004166d6.js"
       ],
       "js.map": [
-        "/packs/hello_typescript-85da1c9103e5e3eb11c9.js.map"
+        "/packs/js/hello_typescript-62a7ba3025e0004166d6.js.map"
       ]
     },
     "server_rendering": {
       "js": [
-        "/packs/server_rendering-85da1c9103e5e3eb11c9.js"
+        "/packs/js/server_rendering-e0a5ca41cd648bea962f.js"
       ],
       "js.map": [
-        "/packs/server_rendering-85da1c9103e5e3eb11c9.js.map"
+        "/packs/js/server_rendering-e0a5ca41cd648bea962f.js.map"
       ]
     }
   },
-  "hello_react.js": "/packs/hello_react-85da1c9103e5e3eb11c9.js",
-  "hello_react.js.map": "/packs/hello_react-85da1c9103e5e3eb11c9.js.map",
-  "hello_typescript.js": "/packs/hello_typescript-85da1c9103e5e3eb11c9.js",
-  "hello_typescript.js.map": "/packs/hello_typescript-85da1c9103e5e3eb11c9.js.map",
-  "server_rendering.js": "/packs/server_rendering-85da1c9103e5e3eb11c9.js",
-  "server_rendering.js.map": "/packs/server_rendering-85da1c9103e5e3eb11c9.js.map"
+  "hello_react.js": "/packs/js/hello_react-e5f4f62a241f06f14a53.js",
+  "hello_react.js.map": "/packs/js/hello_react-e5f4f62a241f06f14a53.js.map",
+  "hello_typescript.js": "/packs/js/hello_typescript-62a7ba3025e0004166d6.js",
+  "hello_typescript.js.map": "/packs/js/hello_typescript-62a7ba3025e0004166d6.js.map",
+  "server_rendering.js": "/packs/js/server_rendering-e0a5ca41cd648bea962f.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-e0a5ca41cd648bea962f.js.map"
 }
