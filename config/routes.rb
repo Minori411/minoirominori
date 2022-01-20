@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   post 'contacts/confirm', to: 'contacts#confirm', as: 'confirm'
   post 'contacts/back', to: 'contacts#back', as: 'back'
   get 'done', to: 'contacts#done', as: 'done'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  resource :my, only: %i(show)
+
 end
