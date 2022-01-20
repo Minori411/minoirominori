@@ -30,8 +30,7 @@ gem 'bcrypt'
 gem 'devise'
 gem 'devise-i18n'
 gem "dotenv-rails"
-gem "jquery-rails"
-gem 'jquery-turbolinks'
+gem "bootstrap"
 gem 'msgpack', '~> 1.4', '>= 1.4.3'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
