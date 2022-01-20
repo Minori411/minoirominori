@@ -1,6 +1,7 @@
 <% provide(:title, "お問い合わせ") %>
+<div class="container_wrap">
 <%= form_for(@contact, url: confirm_path) do |f| %>
-    <div class="container my-5">
+  <div class="container_contact my-5">
     <h5>お問い合わせフォーム</h5>
     <div class="form-group">
       <%= f.label :name, 'お名前*' %>
@@ -30,5 +31,8 @@
     <div class="flex">
       <%= f.submit '入力内容確認', class:"waves-effect waves-light btn" %>
     </div>
-</div>
-  <% end %>
+  </div>
+  </div>
+<% end %>
+
+  

@@ -38,4 +38,117 @@
 </div>
 </header>    
 
-    
+<header class="header smt_hyoji">
+    <div classs="header smt_hyoji">
+        <div class="header_inner flexbox">
+            <div id="nav-drawer" class="header_inner_head flexbox">
+                <div id="logo">
+                    <a href="#" class="flexbox">
+                        <img src="">
+                    </a>
+                </div>
+                <div class="navi auth_buttons flexbox">
+                <input id="nav-input" type="checkbox" class="nav-unshown">
+                <div class="login">
+                    <a href="#">ログイン</a>
+                </div>
+                <div class="navi_entry">
+                    <a href="#" tabindex="0" class="button primaryButton">登録</a>
+                </div>
+                <div class="menu_icon menu_icon_last">
+                    <label id="nav-open" for="nav-input">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                </div>
+                    <label id="nav-close" for="nav-input" class="nav-unshown"></label>
+                </div>
+                <div id="nav-content">
+                    <ul class="p-b2 bggray">
+                        <a href="#">
+                            <li>
+                                <i class="fas fa-question-circle"></i>
+                            みのいろとは？（コンサルタント向け）
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fas fa-question-circle"></i>
+                            みのいろとは？（お客様向け）
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fas fa-question-circle"></i>
+                                HOME
+                            </li>
+                        </a>
+                        <a href="#"></a>
+                        <li class="smt_menu_js">
+                            <a href="#">
+                                <i class="fas fa-chevron-right"></i>
+                                コンサルタントを探す
+                            </a>
+                        <li>
+                        <a href="#">
+                            <li>
+                                <i class="fas fa-chevron-right"></i>
+                                ブログ
+                            </li>
+                        </a>
+                    <ul class="p-b2 bggray">
+                        <a href="#">
+                            <li>ビジョン</li>
+                        </a>
+                        <a href="#">
+                            <li>利用規約</li>
+                        </a>
+                        <a href="#">
+                            <li>個人情報保護法</li>
+                        </a>
+                        <a href="#">
+                            <li>お問い合わせ</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu flexbox">
+                <ul>
+                    <li class="menu_item">
+                        <a href="#">コンサルタントを探す</a>
+                    </li>
+                    <li class="menu_item">
+                        <a href="#">ブログ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</header>
+
+<a href="#">
+    <div class="ad">
+        <i class="fas fa-gift"></i>
+        障害者手帳をお持ちの方はさらに半額キャンペーン実施中!
+        <span>まずは無料登録から!</span>
+    </div>
+</a>
+
+<script type="text/javascript" src="_header.js"></script>
+
+<% if logged_in? %>
+    <li><%= link_to "Users", '#' %></li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Account <b class="caret"></b>
+        </a>
+    <ul class="dropdown-menu">
+        <li><%= link_to "Profile", current_user %></li>
+        <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+        <li class="divider"></li>
+        <li>
+    <%= link_to "Log out", logout_path, method: :delete %>
+        </li>
+    </ul>
+        </li>
+<% else %>
+        <li><%= link_to "Log in", login_path %></li>
+<% end %>
