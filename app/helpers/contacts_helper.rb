@@ -1,3 +1,3 @@
 module ContactsHelper
-    require Contacts_Controller
+    require ContactsHelper
 end
